@@ -1,7 +1,7 @@
 <?php
 	require( "dbconnect.php" );
 	
-	$productList = array();
+	$catalog = array();
 	
 	$sql = "SELECT * FROM productList";
 	$results = mysql_query( $sql );
@@ -16,5 +16,5 @@
 		);
 	}
 	
-	echo json_encode( array( 'productList' => $productList ) );
+	echo json_encode( array( 'catalog' => $catalog ) );
 ?>
