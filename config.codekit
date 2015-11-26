@@ -1730,6 +1730,17 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/bower_components\/bootstrap\/min\/package-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/min\/package-min.js",
+		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/min\/min\/package-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/bower_components\/bootstrap\/package.js": {
 		"fileType": 64,
 		"ignore": 0,
