@@ -5,11 +5,8 @@
 		<title>Online Store</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		
-		<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-		
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		 <script src="js/script.js"></script>
 	</head>
 <body>
 	
