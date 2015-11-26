@@ -6,31 +6,13 @@
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		
 		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		 <script src="js/script.js"></script>
 	</head>
 <body>
-	<div class='container'>
+		<div class='container'>
 		<div id='main' class='sixteen columns'>
-
-<?php
-	require( "dbconnect.php" );
-	$id  = $_GET['cat_id'];
-	$sql = "SELECT * FROM productTable WHERE id='$id'";
-	$result = mysql_query( $sql );
-	$myrow  = mysql_fetch_array( $result );
-	$image_lg  = $myrow['image_lg'];
-	$name      = $myrow['name'];
-	$price     = $myrow['price'];
-	$desc_long = $myrow['desc_long'];
-	
-	echo "<div class='item'>
-	<img src='images/$image_lg' />
-	<p>Name:$name Price:$price</p>
-	<p>$desc_long</p>
-</div> \n";
-?>
-
+			<h1>Catalog list</h1>
 		</div>
-		
 		<div id='nav_bar' class='sixteen columns'>
 			<ul>
 				<li><a href='index.php'>Home</a></li>
@@ -39,7 +21,5 @@
 			</ul>
 		</div>
 	</div>
-	</div>
-</body>
+	</body>
 </html>
-
