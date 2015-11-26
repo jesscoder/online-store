@@ -44,9 +44,9 @@
 				
 				echo "<div class='item'>
 			<img src='images/$image_sm' />
-			<p>Name:<a href='product_detail.php?cat_id=$id'>$name</a> Price:\$$price</p>
-			<p>$desc_short</p>
-			<p>Reviews:12 rating:5.0</p>
+			<p class='name'>Name: <a href='product_detail.php?cat_id=$id'>$name </a> Price:\$$price</p>
+			<p class='short'>$desc_short</p>
+			<p class='review'>Reviews: 12 Rating: 5.0</p>
 		</div>\n";
 			}
 		?>
