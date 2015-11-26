@@ -1,0 +1,99 @@
+body {
+  min-height: 1000px;
+  padding-top: 70px;
+}
+ul.nav.navbar-nav.pull-right a{
+	color: #f697a5;
+	font-family: "Oswald" sans-serif;
+	font-size: 1.5em;
+	
+}
+ul.nav.navbar-nav.pull-right a:hover{
+	color: #ffffff;
+}
+.navbar {
+	height:100px;
+}
+div#navbar.navbar-collapse.collapse {
+	margin-top: 25px;
+}
+.navbar-header h3{
+	margin-top: 30px;
+	color: #f697a5;
+	font-family: "Oswald" sans-serif;
+	font-size: 2.3em;
+}
+a.btn.btn-lg.btn-primary {
+	background-color: #f697a5;
+	border: 1px solid #ffffff;
+	vertical-align: middle;
+}
+.welcome {
+	font-family: "Oswald" sans-serif;
+	text-align: center;
+}
+.welcome-p {
+	font-family: "Lato" sans-serif;
+	text-align: center;
+	font-size: 1em;
+	font-weight: 400;
+}
+.button {
+	text-align: center;
+}
+.jumbotron {
+	margin-top: 200px;
+	background: -webkit-linear-gradient(#f3caca 0%, #ffffff 100%)
+	
+}
+.catalog {
+	margin-top: 200px;
+}
+
+#wrap {
+	margin: auto;
+	width: 600px;	
+}
+#wrap hr {
+	clear: both;
+	border: 1px solid #FF0000;	
+}
+.item {
+	width: 40%;
+	float: left;
+	margin: 10px 1%;
+	padding: 10px;	
+	border: 1px #222 solid;
+	height: 300px;
+	
+}
+.item img {
+	height: 60px;
+	width: 60px;
+	float: left;
+	background: grey;
+	
+}
+.item p, .item h5 {
+	margin-left: 80px;	
+}
+.item h5 {
+	color: #222;	
+}
+.item p {
+	color: #444;	
+}
+
+/* PRODUCT DETAIL PAGE */
+.item_detail img {
+	width: 400px;
+	height: 400px;
+	background: grey;	
+	float: left;
+}
+.item_detail p, .item_detail h5 {
+	margin-left: 440px;	
+}
+.item_detail h5 {
+	padding-top: 20px;	
+}
