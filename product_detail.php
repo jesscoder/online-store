@@ -39,7 +39,7 @@
 	$desc_long = $myrow['desc_long'];
 	
 	echo "<div class='item'>
-			<img src='images/$image_sm' />
+			<img src='$image_sm' />
 			<p>Name:<a href='product_detail.php?cat_id=$id'>$name</a> Price:\$$price</p>
 			<p>$desc_long</p>
 		</div>\n";

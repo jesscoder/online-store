@@ -6,7 +6,6 @@ ul.nav.navbar-nav.pull-right a{
 	color: #f697a5;
 	font-family: "Oswald" sans-serif;
 	font-size: 1.5em;
-	
 }
 ul.nav.navbar-nav.pull-right a:hover{
 	color: #ffffff;
@@ -44,7 +43,6 @@ a.btn.btn-lg.btn-primary {
 .jumbotron {
 	margin-top: 200px;
 	background: -webkit-linear-gradient(#f3caca 0%, #ffffff 100%)
-	
 }
 .about {
 	margin-top: 200px;
@@ -67,29 +65,20 @@ a.btn.btn-lg.btn-primary {
 	border: 1px solid #FF0000;	
 }
 .item {
+	float: left;
 	width: 30%;
 	float: left;
-	margin: 10px 1%;
+	margin: 10px ;
 	padding: 10px;	
 	border: 1px #222 solid;
 	height: 300px;
-	
 }
 .item img {
-	height: 60px;
-	width: 60px;
 	float: left;
-	background: grey;
+	margin-right: 12px;
+	height: 80px;
+	width: 80px;
 	
-}
-.item p, .item h5 {
-	margin-left: 80px;	
-}
-.item h5 {
-	color: #222;	
-}
-.item p {
-	color: #444;	
 }
 .name {
 	font-family: "Oswald" sans-serif;
@@ -106,18 +95,4 @@ a.btn.btn-lg.btn-primary {
 	font-weight: 300;
 	font-size: 1.3em;
 	padding-top: 30px;
-}
-
-/* PRODUCT DETAIL PAGE */
-.item_detail img {
-	width: 400px;
-	height: 400px;
-	background: grey;	
-	float: left;
-}
-.item_detail p, .item_detail h5 {
-	margin-left: 440px;	
-}
-.item_detail h5 {
-	padding-top: 20px;	
 }

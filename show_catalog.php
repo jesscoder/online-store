@@ -40,7 +40,7 @@
 				$desc_short = $myrow['desc_short'];
 				
 				echo "<div class='item'>
-			<img src='images/$image_sm' />
+			<img src='$image_sm' />
 			<p class='name'>Name: <a href='product_detail.php?cat_id=$id'>$name </a> Price:\$$price</p>
 			<p class='short'>$desc_short</p>
 			<p class='review'>Reviews: 12 Rating: 5.0</p>
