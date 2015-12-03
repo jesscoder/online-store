@@ -25,7 +25,7 @@
 </nav>
 
 <div class="container catalog">
-	<div class="wrap">
+	<div id="wrap">
 
 		<?php
 			require( "dbconnect.php" );
