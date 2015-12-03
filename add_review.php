@@ -25,7 +25,7 @@
     </div>
 </nav>
 
-	<div class="container">
+	<div class="container catalog">
 		<div id="wrap">
 			<h1>Add a review</h1>
 			
@@ -42,24 +42,30 @@
 			//Set up an SQL query that adds a new review to review table
 				
 				
-				
-				
 				$sql = "INSERT INTO review ( id, name, review, rating, date ) 
 				VALUES( '', '$name', '$review', '$rating', NOW() )";
 				
-				$results = mysql_query( $sql );
+				$sql = "SELECT * FROM productTable WHERE id = '$cat_id'";
+				$result = mysql_query( $sql );
+				$myrow = mysql_fetch_array( $result );
+				$product_name = $myrow['name'];
+				echo "Thanks for reviewing $product_name";
+				
 				
 				if ( $result ) {
-					echo "<p>The review table has been updated</p>";
-					echo "<p><a href='{$_SERVER['PHP_SELF']}'>Add another</a></p>";
+					echo "<p>The review table has been updated.</p>";
+					echo "<p class='add'><a href='product_detail.php?cat_id='$cat_id'>Add another</a></p>";
+					echo "<p class='back'><a href='product_detail.php?cat_id='$cat_id'>Back to product</a></p>";
 				} else {
 					echo "<p>There has been an error updating the review table</p>";
 					echo "<p>Error:" .mysql_error() . "</p>";
+					echo "<p><a href='product_detail.php?cat_id=$cat_id'>Back.</a></p>";
+				
 				}
 				
 			//Set up an SQL query to get all reviews for product
 				
-				$sql = "SELECT * FROM review WHERE cat_id = '$cat_id'";
+				$sql = "SELECT * FROM productTable WHERE cat_id = '$cat_id'";
 				
 				$result = mysql_query( $sql );
 				
@@ -81,8 +87,6 @@
 				mysql_query( $sql );
 		
 			?>
-			
-			<p>Thanks for submitting a review of this product</p>
 			
 		</div>
 	</div> <!-- /container -->

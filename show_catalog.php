@@ -38,12 +38,15 @@
 				$name       = $myrow['name'];
 				$price      = $myrow['price'];
 				$desc_short = $myrow['desc_short'];
+				$reviews	= $myrow['review'];
+				$rating 	= round( $myrow['rating'], 2);
 				
 				echo "<div class='item'>
 			<img src='$image_sm' />
-			<p class='name'>Name: <a href='product_detail.php?cat_id=$id'>$name </a> Price:\$$price</p>
+			<p class='name'><a href='product_detail.php?cat_id=$id'>$name </a></p>
+			<p class='price_sm'>\$$price</p>
 			<p class='short'>$desc_short</p>
-			<p class='review'>Reviews: 12 Rating: 5.0</p>
+			<p class='review'>Reviews:$reviews Rating: $rating</p>
 		</div>\n";
 			}
 		?>
