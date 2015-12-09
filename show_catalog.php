@@ -27,7 +27,7 @@
 <div class="container catalog">
 	<div id="wrap">
 
-		<?php
+	<?php
 			require( "dbconnect.php" );
 			$sql = "SELECT * FROM productTable";
 			$results = mysql_query( $sql );
@@ -43,16 +43,24 @@
 				
 				echo "<div class='item'>
 			<img src='$image_sm' />
-			<p class='name'><a href='product_detail.php?cat_id=$id'>$name </a></p>
-			<p class='price_sm'>\$$price</p>
-			<p class='short'>$desc_short</p>
-			<p class='review'>Reviews:$reviews Rating: $rating</p>
-		</div>\n";
+				<p class='name'><a href='product_detail.php?cat_id=$id'>$name </a></p>
+				<p class='price_sm'>\$$price</p>
+				<p class='short'>$desc_short</p>
+				<p class='review'>Reviews:$reviews Rating: $rating</p>
+			</div>\n";
 			}
 		?>
+
 	</div>
 </div>
 
 
 </body>
 </html>
+Things that don't work:
+
+Long description image.
+Name, price, and description on long description page.
+Reviews/Rating results on catalog page and long description page.
+You can add a review on the long description's page, it says it's been added, but 1.) "Thanks for reviewing (should show product name)." doesn't show. 2.) No review is added to the database. 
+I've gone through this a few times, and also copied the module's example exactly, then did it over again, I still can't figure out why these things won't show. My brain is starting to fizzle. A second set of eyes can probably point out mistakes I just can't see right now. 
