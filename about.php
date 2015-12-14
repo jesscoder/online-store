@@ -1,14 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-		<title>Online Store</title>
-		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<meta http-equiv="Content-Type" content="text/html"/>
+		<meta charset="UTF-8" />
 		
+		<title>About Typographix</title>
+		<link href="css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+		
+		<link href='https://fonts.googleapis.com/css?family=Great+Vibes|Lato:400,100,300|Oswald|Lobster|Kaushan+Script' rel='stylesheet' type='text/css'>
+		
 		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		 <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+		 <script type="text/javascript">
+			 
+			 var map;
+			 var infoWindow;
+			 
+			 function loadMap() {
+				 
+				 map = new google.maps.Map(document.getElementById(("map"), {
+					 center: new google.maps.LatLng(40, -100),
+					 zoom: 4,
+					 myTypeId: 'roadmap',
+					 mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU}
+				 });
+				 
+				 infoWindow = new google.maps.InfoWindow();
+				 
+				 setLocations();
+				 
+			 }
+			 
+			 function setLocations() {
+				 jQuery.ajax({
+					 url: "google_maps/location.php",
+					 dataType: 'json'
+				 }).done( function(data, textStatus, jqXHR ) {
+					 
+					 var bound = new google.maps.LatLngBounds();
+					 for( var i = 0; i < data.locations.length; i++ )
+					 {
+						 var markerInfo = data.locations[i];
+						 var latlng = new google.maps.LatLng(
+							 parseFloat(markerInfo.lat),
+							 parseFloat(markerInfo.lng));
+							 
+							 createMarker(lanlng, markerInfo.address);
+							 bounds.extend(latlng);
+						 }
+						 
+						 map.fitBounds(bounds);
+					 
+				 }).fail( function( jqXHR, testStatus, errorThrown ) {
+					 jQuery('#wrap').html( "Sorry, we are having server problems. Please try again later." );
+				 });
+			 }
+			 
+			 function createMarker(latlng, address) {
+				 var html = "<b>" + name + "</b> <br/>" + address;
+				 var marker = new google.maps.Marker({
+					 map: map,
+					 position: latlng
+				 });
+				 google.maps.event.addListener(marker, 'click', function() {
+					 infoWindow.setContent(html);
+					 infoWindow.open(map, marker);
+				 });
+			 }
+			 
+			 </script>
+		 
 	</head>
-<body>
+<body onload='loadMap()'>
+	
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       	<div class="navbar-header">
@@ -23,15 +89,27 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-<div class="container about">
-	<h1>About Typographix</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum cursus elit, sed mattis mauris tempus pharetra. Fusce feugiat quam vitae blandit consequat. Nunc pretium lorem leo, in ornare lorem mollis nec. In facilisis facilisis justo. Curabitur ut consectetur magna, id convallis eros. Phasellus finibus orci a turpis iaculis, tempus accumsan eros vestibulum. Nullam nec leo quis risus gravida laoreet. Phasellus vel tellus et magna ornare aliquet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque molestie ac mauris non rhoncus. Nam et maximus metus. Maecenas ac lacus in nulla rutrum elementum vel sit amet turpis. Nam sit amet dignissim tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<div id="wrap" class="container catalog">
+	<h2 class="list">About Typographix</h2>
+	<p class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum cursus elit, sed mattis mauris tempus pharetra. Fusce feugiat quam vitae blandit consequat. Nunc pretium lorem leo, in ornare lorem mollis nec. In facilisis facilisis justo. Curabitur ut consectetur magna, id convallis eros. Phasellus finibus orci a turpis iaculis, tempus accumsan eros vestibulum. Nullam nec leo quis risus gravida laoreet. Phasellus vel tellus et magna ornare aliquet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque molestie ac mauris non rhoncus. Nam et maximus metus. Maecenas ac lacus in nulla rutrum elementum vel sit amet turpis. Nam sit amet dignissim tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	
+	
+	<div id="fb-root"></div>
 
-<p>Nulla facilisi. Pellentesque tempus libero id sem finibus vehicula. Fusce at nisi sodales, semper ipsum sed, cursus nisi. Vestibulum id ullamcorper lorem. Aliquam pellentesque augue id enim faucibus, in sollicitudin sem convallis. Suspendisse et ipsum quis sem aliquet condimentum vel nec odio. Morbi nisi nisl, scelerisque ut sagittis vel, placerat non mauris.</p>
+			<script>
+				(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+					  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+<div class="like">Like Us on Facebook</div>
+<div class="fb-like" data-href="https://www.jessicavr.com/" data-width="50" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+<div class="products">
 
-<p>Morbi bibendum sagittis maximus. Aliquam congue eros varius nisi auctor, eget eleifend purus dapibus. Vestibulum efficitur et neque non gravida. Quisque at lacus elementum, ultrices sem nec, imperdiet velit. Praesent blandit ex quis sem maximus cursus. Aenean at viverra nunc. Integer finibus vulputate tortor quis rhoncus. Integer imperdiet mollis elit eget euismod. In iaculis rutrum finibus. Pellentesque quis libero at justo pretium molestie. Etiam luctus nunc id libero efficitur, a pharetra sapien venenatis. Sed non rutrum leo. Nullam mattis ac purus sollicitudin suscipit. Ut porta at quam vitae imperdiet.</p>
-
-<p>Nulla vulputate sapien quis odio condimentum commodo. Aenean sit amet turpis ut urna convallis ornare. Donec commodo risus id ex commodo, id finibus magna rutrum. Phasellus odio metus, vestibulum in ex nec, dignissim faucibus elit. Suspendisse non dui sed lorem gravida aliquam vel nec lorem. Sed vitae ligula efficitur, vulputate ipsum quis, convallis ex. Quisque ullamcorper libero purus.</p>
+	<div id="map"></div>
 </div>
 
 </body>
