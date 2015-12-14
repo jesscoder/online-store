@@ -1,9 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Lato); 
-@import url(http://fonts.googleapis.com/css?family=Raleway);    
-@import url(http://fonts.googleapis.com/css?family=Lobster);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
-@import url(http://fonts.googleapis.com/css?family=Oswald);
+body {
+	background-image: url(../images/Pink_Paper.jpg);
+	background-size: cover;
+}
 
+.typographix {
+	font-family: 'Great Vibes', cursive;
+	font-size: 2em;
+	line-height: 1;
+}
 
 label {
 	width: 4em;
@@ -16,15 +20,26 @@ label {
 .submit input {
 	margin-left: 4.5em;
 }
-
+.fb-like {
+float: left;
+}
+.like {
+	font-size: 1.3em;
+	font-weight: 600;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.products {
+	float: left;
+}
 body {
   min-height: 1000px;
   padding-top: 70px;
 }
 ul.nav.navbar-nav.pull-right a{
 	color: #f697a5;
-	font-family: "Oswald" sans-serif;
-	font-size: 1.5em;
+	font-family: "Lato" sans-serif;
+	font-size: 1.3em;
 	font-size: 100;
 }
 ul.nav.navbar-nav.pull-right a:hover{
@@ -32,6 +47,7 @@ ul.nav.navbar-nav.pull-right a:hover{
 }
 .navbar {
 	height:100px;
+	
 }
 div#navbar.navbar-collapse.collapse {
 	margin-top: 25px;
@@ -39,7 +55,7 @@ div#navbar.navbar-collapse.collapse {
 .navbar-header h3{
 	margin-top: 30px;
 	color: #f697a5;
-	font-family: "Oswald" sans-serif;
+	font-family: "Lobster" sans-serif;
 	font-size: 2.3em;
 	font-size: 100;
 }
@@ -48,8 +64,13 @@ a.btn.btn-lg.btn-primary {
 	border: 1px solid #ffffff;
 	vertical-align: middle;
 }
+a.btn.btn-lg.btn-primary:hover{
+	background-color: #2b2b2b;
+	border: 1px solid #ffffff;
+	vertical-align: middle;
+}
 .welcome {
-	font-family: "Oswald" sans-serif;
+	font-family: "Lato" sans-serif;
 	text-align: center;
 }
 .welcome-p {
@@ -57,16 +78,20 @@ a.btn.btn-lg.btn-primary {
 	text-align: center;
 	font-size: 1em;
 	font-weight: 400;
+	padding: 20px;
 }
 .button {
 	text-align: center;
 }
 .jumbotron {
 	margin-top: 200px;
-	background: -webkit-linear-gradient(#f3caca 0%, #ffffff 100%)
+	border: 1px solid pink;
+	background-color: rgba(248, 248, 248, 0.83);
 }
 .about {
-	margin-top: 200px;
+	margin-top: 140px;
+	font-family: "Lato" sans-serif;
+	font-size: 1.1em;
 }
 .about h1 {
 	text-align: center;
@@ -74,7 +99,7 @@ a.btn.btn-lg.btn-primary {
 	padding-bottom: 20px;
 }
 .catalog {
-	margin-top: 200px;
+	margin-top: 100px;
 }
 
 .wrap {
@@ -83,22 +108,37 @@ a.btn.btn-lg.btn-primary {
 }
 #wrap hr {
 	clear: both;
-	border: 1px solid #FF0000;	
+	border: 1px solid #ffffff;	
+	width: 80%;
+}
+.list {
+	font-family: "Kaushan Script";
+	font-weight: 300;
+	font-size: 3rem;
+	text-align: center;
+	background-color: #262626;
+	color: #ffffff;
+	padding: 20px;
+	float: left;
+	width: 100%;
 }
 .item {
 	float: left;
-	width: 30%;
+	width: 31%;
 	float: left;
 	margin: 10px ;
-	padding: 10px;	
-	border: 1px #222 solid;
-	height: 400px;
+	padding: 30px;	
+	background-color: #282828;
+	height: 560px;
+	border-top-right-radius: 50px;
+	box-shadow: 3px 3px 5px  #3c3c3c;
 }
 .item img {
 	float: left;
-	margin-right: 12px;
-	height: 80px;
-	width: 80px;
+	height: 190px;
+	width: 160px;
+	border-top-right-radius: 50px;
+	border: 1px solid #df7399;
 }
 .name {
 	font-family: "Oswald" sans-serif;
@@ -106,6 +146,7 @@ a.btn.btn-lg.btn-primary {
 	font-weight: 100;
 	clear: both;
 	padding-top: 20px;
+	
 }
 .name a {
 	font-family: "Oswald" sans-serif;
@@ -118,99 +159,146 @@ a.btn.btn-lg.btn-primary {
 	font-family: "Oswald" sans-serif;
 	font-size: 2vh;
 	font-weight: 100;
-	color: #303030;
+	color: #ffffff;
 	text-decoration: none;
 }
 .short {
-	font-family: "Ubuntu" sans-serif;
+	color: #ffffff;
+	font-family: "Lato" sans-serif;
 	padding-top: 30px;
 	font-size: 1.5vh;
+	font-weight: 300;
 }
+#review, .form_review {
+	color: #ffffff;
+	margin-top: 5px;
+	float: left;
+	width: 100%;
+	background-color: #272727;	
+}
+form {
+	float: left;
+	clear: both;
+}
+.rev {
+	margin-top: 50px;
+	margin-left: 200px;
+	margin-bottom: 50px;
+	font-size: 1.3em;
+	font-weight: 300px;
+	font-family: "Lato" sans-serif;
+}
+
 .review {
+	color: #ffffff;
 	font-family: "Lato" sans-serif;
 	font-weight: 300;
 	font-size: 1.3em;
 	padding-top: 30px;
 }
-.form_review {
-	margin-top: 20px;
-	float: left;
-	border: 1px solid black;
-	width: 100%;
-}
-.item_long{
+.add_review {
 	width: 100%;
 	float: left;
-	border: 1px #222 solid;
-	height: 300px;
-	padding: 20px;
+	height: 350px;
+	padding: 50px;
+	padding-left: 30%;
+	background-color: #2c2c2c;
 }
-.long_name {
-	font-family: "Raleway" sans-serif;
-	font-size: 2vh;
-	font-weight: 600;
+.item_long {
+	width: 100%;
+	float: left;
+	clear: both;
+	height: 560px;
+	padding: 30px;
+	background-color: #2c2c2c;
 }
-.price {
-	font-family: "Raleway" sans-serif;
-	font-size: 2vh;
-	font-weight: 600;
+.item_long img {
+	float: left;
+	width: 390px;
+	height: 500px;
+	background-color: #1d1d1d;	
+	border-top-right-radius: 50px;
+	border: 1px solid #df7399;
 }
+.item_long h3 {
+	padding-top: 50px;
+	font-family: "Lato" sans-serif;
+	font-size: 1.5em;
+	font-weight: 100;
+	color: #ffffff;
+	margin-left: 490px;	
+	font-weight: 300;
+}
+.review_item {
+	width: 100%;
+	float: left;
+	padding-left: 10px;
+	background-color: #2c2c2c;
+	color: #ffffff;
+}
+
 .price_sm {
 	font-family: "Oswald" sans-serif;
 	font-size: 1.4vh;
 	font-weight: 400;
 	padding-top: 20px;
+	color: #ffffff;
 }
-.description {
-	font-family: "Raleway" sans-serif;
-	font-size: 1.5vh;
-	font-weight: 400;
-}
-.rating {
-	font-family: "Raleway" sans-serif;
-	font-size: 1.5vh;
-	font-weight: 400;
-}
-#review {
-	margin-top:20px;
-	
-}
-.review_h3 {
-	padding: 20px;
-}
-.r {
-	font-family: "Ubuntu" sans-serif;
-	font-size: 1.3vh;
-	font-weight: 100;
-	
+
+p.r {
+	font-family: "Lato" sans-serif;
+	font-size: 1.3em;
+	font-weight: 300;
 }
 input[type="text"] {
 	width: 50%;
-	font-size: 1vh;
-	font-family: "Ubuntu" sans-serif;
+	font-size: 1em;
 	padding: 5px;
+	color: #232323;
+}
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 10%;
+	
 }
 textarea {
-	font-size: 1vh;
-	font-family: "Ubuntu" sans-serif;
 	padding: 5px;
 	width: 50%;
 }
-input[type="submit"] {
-	background-color: #2c2c2c;
-	color: #f697a5;
-	width: 100px;
-	height: 50px;
-	margin-left: 78px;
-	font-size: 1.3vh;
-	font-family: "Oswald" sans-serif;
-	padding: 5px;
-	margin-top: 10px;
+.text {
+	color: #272727;
 }
+input[type="submit"] {
+	background-color: #f697a5;
+	color: #f2f2f2;
+	width: 200px;
+	height: 50px;
+	margin-left: 150px;
+	font-size: 1.3em;
+	padding: 5px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	border: none;
+}
+input[type="submit"]:hover {
+	background-color: #323232;
+	color: #ffffff;
+	width: 200px;
+	height: 50px;
+	margin-left: 150px;
+	padding: 5px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	border: 1px solid #4e4e4e;
+}
+
 .add a{
 	color: #f697a5;
 	font-size: 1.3vh;
 	font-family: "Oswald" sans-serif;
+	text-decoration: none;
 }
 .add a:hover{
 	color: #2c2c2c;
@@ -220,13 +308,52 @@ input[type="submit"] {
 }
 
 .back a{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -60%);
+	background-color: #282828;
+	padding: 20px;
 	color: #f697a5;
-	font-size: 1.3vh;
+	font-size: 1.3em;
 	font-family: "Oswald" sans-serif;
 }
 .back a:hover{
-	color: #2c2c2c;
-	font-size: 1.3vh;
+
+	color: #ffffff;
+	font-size: 1.3em;
 	font-family: "Oswald" sans-serif;
 	text-decoration: none;
+}
+.thankyou {
+	font-size: 1.5em;
+	font-family: "Lato" sans-serif;
+	text-align: center;
+	margin-top: 50px;
+}
+span{
+	font-weight: 600;
+}
+.update1 {
+	font-family: "Lato" sans-serif;
+	font-size: 2em;
+	text-align: center;
+}
+.update {
+	padding-top: 40px;
+	font-family: "Lato" sans-serif;
+	font-size: 1.5em;
+	text-align: center;
+	color: #00a32a;
+}
+.failed {
+	padding-top: 40px;
+	font-family: "Lato" sans-serif;
+	font-size: 1.5em;
+	text-align: center;
+	color: #a30000;
+}
+#map {
+	width: 100%;
+	height: 480px;
 }
